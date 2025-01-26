@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8694826889e894c854e6033a4ef480, type: 3}
+  m_Name: DoubleBarrel_Pistol
+  m_EditorClassIdentifier: 
+  gunName: Pistol
+  gunSubTitle: 
+  gunDescription: Double Barrel Pistol
+  gunFireSpeed: 10
+  recoilDuration: 0.1
+  recoilAmount: {x: 10, y: 0, z: 0}
+  bulletSpeed: 50
+  gunAuto: 1
+  fireRate: 0.5
+  gunPrefab: {fileID: 9028580339747694192, guid: 08a683aca1245fa4cab093c55d638bd8, type: 3}
+  gunSymbol: {fileID: 2728346674274160565, guid: f82f0fae204e49843bfef89f70ca80ef, type: 3}
