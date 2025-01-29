@@ -20,7 +20,7 @@ namespace GameDevWithNey.Guns
 
             //stores the muzzle flash particle system
             ParticleSystem.MainModule muzzleFlashParticles = muzzleFlash.GetComponent<ParticleSystem>().main;
-            
+
             //change the color of the muzzle flash
             muzzleFlashParticles.startColor = Color.white;
 

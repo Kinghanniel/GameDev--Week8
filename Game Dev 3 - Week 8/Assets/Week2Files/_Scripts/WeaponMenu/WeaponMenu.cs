@@ -9,7 +9,7 @@ namespace GameDevWithNey
 
         //Boolean to track if the UI is active
         private bool isUIActive = false;
-       
+
 
         // Update is called once per frame
         void Update()
@@ -24,12 +24,12 @@ namespace GameDevWithNey
                 if (isUIActive)
                 {
                     Cursor.visible = true;
-                    Cursor.lockState = CursorLockMode.None; 
+                    Cursor.lockState = CursorLockMode.None;
                 }
                 else
                 {
                     Cursor.visible = false;
-                    Cursor.lockState = CursorLockMode.Locked; 
+                    Cursor.lockState = CursorLockMode.Locked;
 
                 }
             }

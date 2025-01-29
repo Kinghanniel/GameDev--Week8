@@ -1,6 +1,6 @@
-using UnityEngine;
 using System.Collections;
 using DG.Tweening;  //DoTween library
+using UnityEngine;
 
 namespace ameDevWithNey.Guns
 {
@@ -26,7 +26,7 @@ namespace ameDevWithNey.Guns
             cam = FindObjectOfType<Camera>();
 
             // Use local rotation instead of global
-            originalRotation = transform.localRotation; 
+            originalRotation = transform.localRotation;
         }
 
 

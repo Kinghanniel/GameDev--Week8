@@ -21,7 +21,7 @@ namespace GameDevWithMarco.Enemy
             agent = GetComponent<NavMeshAgent>();
             HandlePlayerChange();
 
-            
+
 
             if (target == null)
             {

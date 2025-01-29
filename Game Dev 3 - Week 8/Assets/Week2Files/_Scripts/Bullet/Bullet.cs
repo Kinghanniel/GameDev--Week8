@@ -1,5 +1,4 @@
 using GameDevWithMarco;
-using System.Collections;
 using UnityEngine;
 
 namespace GameDevWithNey
@@ -22,11 +21,11 @@ namespace GameDevWithNey
                     Debug.Log("Zombie lost healht" + damageAmount);
                 }
             }
-            
+
 
         }
 
-        
+
 
 
 

@@ -18,27 +18,27 @@ public class ButtonAnimation : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public void OnPointerEnter(PointerEventData eventData)
     {
         // Animate button scale when mouse hovers over
-    
-        
+
+
         transform.localScale = hoverScale;
-        
+
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         // Restore original button scale when mouse exits
-        
-        
+
+
         transform.localScale = originalScale;
-        
+
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         // Restore original button scale when clicked
         transform.localScale = originalScale;
-       
+
     }
 
-   
+
 }

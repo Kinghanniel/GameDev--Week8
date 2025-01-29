@@ -1,6 +1,6 @@
+using GameDevWithMarco.Enemy;
 using UnityEngine;
 using UnityEngine.AI;
-using GameDevWithMarco.Enemy;
 
 namespace GameDevWithMarco.StatePattern
 {

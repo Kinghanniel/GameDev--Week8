@@ -1,9 +1,5 @@
-using UnityEngine;
 using GameDevWithMarco.Enemy;
-using Unity.VisualScripting;
-using GameDevWithMarco.Player;
-using GameDevWithMarco.ObserverPattern;
-using System.Collections.Generic;
+using UnityEngine;
 
 namespace GameDevWithMarco.StatePattern
 {
@@ -51,7 +47,7 @@ namespace GameDevWithMarco.StatePattern
             currentState = movingState; // default state
             currentState?.EnterState(this); // execute the EnterState() when Start() would happen
 
-            zombieRigidbody = GetComponent<Rigidbody>(); 
+            zombieRigidbody = GetComponent<Rigidbody>();
 
         }
 
@@ -70,10 +66,10 @@ namespace GameDevWithMarco.StatePattern
         {
             currentState?.OnTriggerEnter(this, other);
 
-            
+
 
         }
-        
+
         private void OnCollisionExit(Collision collision)
         {
             currentState?.OnCollisionExit(this, collision);

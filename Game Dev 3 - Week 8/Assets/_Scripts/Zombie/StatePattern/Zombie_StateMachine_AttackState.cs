@@ -1,9 +1,6 @@
-using GameDevWithMarco.StatePattern;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using GameDevWithMarco.Player;
 using GameDevWithMarco.Enemy;
+using GameDevWithMarco.StatePattern;
+using UnityEngine;
 
 
 namespace GameDevWithMarco
@@ -53,7 +50,7 @@ namespace GameDevWithMarco
                 {
                     // Deal damage to the car
                     Debug.Log("Zombie attacks the car!");
-                   
+
                 }
             }
 

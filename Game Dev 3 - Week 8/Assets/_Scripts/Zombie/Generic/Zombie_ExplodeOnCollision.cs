@@ -1,5 +1,5 @@
-using UnityEngine;
 using GameDevWithMarco.Player;
+using UnityEngine;
 
 namespace GameDevWithMarco.Enemy
 {

@@ -1,5 +1,5 @@
-using UnityEngine;
 using GameDevWithNey.ScriptabelObjects;
+using UnityEngine;
 
 namespace GameDevWithNey.Managers
 {
@@ -72,13 +72,13 @@ namespace GameDevWithNey.Managers
         {
 
             //move to previous gun in the array
-            currentIndex --;
+            currentIndex--;
 
             if (currentIndex < 0)
             {
                 currentIndex = gunScriptableObjects.Length - 1;
             }
-           
+
 
             //update the active scriptable object
             activeScriptableObject = gunScriptableObjects[currentIndex];

@@ -1,6 +1,6 @@
-using UnityEngine;
 using DG.Tweening;
 using GameDevWithNey.ScriptabelObjects;
+using UnityEngine;
 
 namespace GameDevWithNey.Guns
 {
@@ -25,8 +25,8 @@ namespace GameDevWithNey.Guns
         public Transform[] tipOfTheBarrels;
         public Transform bulletShell;
         public GameObject muzzleFlash;
-        public Vector3 muzzleFlashRotationAdjustment = new Vector3(0, 95, 0); 
-        public Vector3 bulletRotationAdjustment = new Vector3(0, 95, 0); 
+        public Vector3 muzzleFlashRotationAdjustment = new Vector3(0, 95, 0);
+        public Vector3 bulletRotationAdjustment = new Vector3(0, 95, 0);
 
 
         public GameObject bulletPrefab;
@@ -57,7 +57,7 @@ namespace GameDevWithNey.Guns
             originalPosition = transform.position;
             gunAudioSource = GetComponent<AudioSource>();
 
-            
+
         }
 
         protected virtual void Update()
@@ -68,11 +68,11 @@ namespace GameDevWithNey.Guns
                 // Check if the gun is allowed to fire based on the cooldown
                 if (Input.GetMouseButton(1) && Time.time >= nextFireTime)
                 {
-                  nextFireTime = Time.time + gunsScriptable.fireRate;  // Set the next time the gun can fire
-                  FireBullet();
-                  MuzzleFlash();
-                  GunSound();
-                  Recoil();
+                    nextFireTime = Time.time + gunsScriptable.fireRate;  // Set the next time the gun can fire
+                    FireBullet();
+                    MuzzleFlash();
+                    GunSound();
+                    Recoil();
                 }
             }
             else
@@ -98,12 +98,12 @@ namespace GameDevWithNey.Guns
                 //The next line will adjust the rotation of it
                 flash.transform.Rotate(muzzleFlashRotationAdjustment);
             }
-            
+
         }
 
         protected virtual void FireBullet()
         {
-            foreach(Transform barrel in tipOfTheBarrels)
+            foreach (Transform barrel in tipOfTheBarrels)
             {
                 //Instantiate the bullet at the tip of the barrel
                 GameObject bullet = Instantiate(bulletPrefab, barrel.position, transform.rotation);
@@ -146,11 +146,12 @@ namespace GameDevWithNey.Guns
 
             // Apply the punch rotation for recoil, using local rotation
             latestSpawnedGun.transform.DOPunchRotation(gunsScriptable.recoilAmount, gunsScriptable.recoilDuration)
-            .OnComplete(() => {
+            .OnComplete(() =>
+            {
                 // After the punch effect, smoothly return the gun to its original local rotation
-            latestSpawnedGun.transform.DOLocalRotateQuaternion(originalRotation, 0.2f);
+                latestSpawnedGun.transform.DOLocalRotateQuaternion(originalRotation, 0.2f);
             });
-           
+
         }
         // Method to set the latest spawned gun reference
         public void SetLatestSpawnedGun(GameObject gun)

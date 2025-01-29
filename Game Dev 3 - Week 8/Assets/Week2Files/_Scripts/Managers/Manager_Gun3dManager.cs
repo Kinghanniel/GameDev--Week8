@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using GameDevWithNey.ScriptabelObjects;
 using GameDevWithNey.Guns;
+using GameDevWithNey.ScriptabelObjects;
+using UnityEngine;
 
 
 namespace GameDevWithNey.Managers
@@ -15,7 +13,7 @@ namespace GameDevWithNey.Managers
         // Variable to keep track of the spawned gun
         GameObject latestSpawnedGun;
 
-        
+
 
         public void SpawnGun(GunsType_ScriptableObject activeSO)
         {

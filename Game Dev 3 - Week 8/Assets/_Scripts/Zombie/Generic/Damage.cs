@@ -1,6 +1,6 @@
 
-using UnityEngine;
 using GameDevWithMarco.Player;
+using UnityEngine;
 namespace GameDevWithMarco
 {
     public class Damage : MonoBehaviour
@@ -23,10 +23,10 @@ namespace GameDevWithMarco
                     Debug.Log("Player took damage at position: " + collisionPoint);
                 }
             }
-           // else
-           // {
-             //   Destroy(gameObject);
-           // }
+            // else
+            // {
+            //   Destroy(gameObject);
+            // }
         }
     }
 }

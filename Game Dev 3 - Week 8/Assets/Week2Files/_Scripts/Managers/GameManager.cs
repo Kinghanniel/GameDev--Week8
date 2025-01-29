@@ -1,7 +1,7 @@
-using UnityEngine;
-using UnityEngine.UI; 
 using System.Collections;
-using UnityEngine.SceneManagement; 
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace GameDevWithNey
 {
@@ -27,9 +27,9 @@ namespace GameDevWithNey
         {
             while (countdownTime > 0)
             {
-              countdownTime -= Time.deltaTime;
-              timerText.text = Mathf.Ceil(countdownTime).ToString(); // Update the timer UI
-              yield return null; // Wait for the next frame
+                countdownTime -= Time.deltaTime;
+                timerText.text = Mathf.Ceil(countdownTime).ToString(); // Update the timer UI
+                yield return null; // Wait for the next frame
             }
 
             // When the timer reaches zero, check for vases
@@ -39,7 +39,7 @@ namespace GameDevWithNey
         private void Update()
         {
             CheckVases();
-           
+
         }
 
         private void CheckVases()
@@ -60,19 +60,19 @@ namespace GameDevWithNey
             {
                 // If there are no vases, show the win menu
                 winMenu.SetActive(true);
-                Time.timeScale = 0; 
+                Time.timeScale = 0;
 
                 Cursor.visible = true; // Make the cursor visible
-               Cursor.lockState = CursorLockMode.None; // Unlock the cursor
+                Cursor.lockState = CursorLockMode.None; // Unlock the cursor
             }
         }
 
         public void ReplayGame()
         {
             Debug.Log("Game should replay");
-            Time.timeScale = 1; 
+            Time.timeScale = 1;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reload the current scene
-            
+
         }
     }
 }

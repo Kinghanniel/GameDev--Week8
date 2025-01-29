@@ -22,38 +22,38 @@ namespace GameDevWithNey
 
         void Start()
         {
-           // Set the camera to its default FOV at the start
-           playerCamera.fieldOfView = defaultFOV;
+            // Set the camera to its default FOV at the start
+            playerCamera.fieldOfView = defaultFOV;
 
-           //store the initial position and rotation of the GunsSpawnPos
-           initialGunPosition =  GunsSpawnPos.localPosition;
-           initialGunRotation =  GunsSpawnPos.localRotation;
+            //store the initial position and rotation of the GunsSpawnPos
+            initialGunPosition = GunsSpawnPos.localPosition;
+            initialGunRotation = GunsSpawnPos.localRotation;
         }
 
         void Update()
         {
-          // Check if the player is holding down the "T" key
-          if (Input.GetKey(KeyCode.T))
-          {
-            // Smoothly transition to zoomed FOV
-            playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, zoomFOV, zoomSpeed * Time.deltaTime);
+            // Check if the player is holding down the "T" key
+            if (Input.GetKey(KeyCode.T))
+            {
+                // Smoothly transition to zoomed FOV
+                playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, zoomFOV, zoomSpeed * Time.deltaTime);
 
-            //,set the new position and rotation for the GunSpawnPos when zoom in
-            GunsSpawnPos.localPosition = Vector3.Lerp(GunsSpawnPos.localPosition, zoomedGunPosition, zoomSpeed * Time.deltaTime);
-            GunsSpawnPos.localRotation = Quaternion.Lerp(GunsSpawnPos.localRotation, Quaternion.Euler(zoomedGunRotation), zoomSpeed * Time.deltaTime);
+                //,set the new position and rotation for the GunSpawnPos when zoom in
+                GunsSpawnPos.localPosition = Vector3.Lerp(GunsSpawnPos.localPosition, zoomedGunPosition, zoomSpeed * Time.deltaTime);
+                GunsSpawnPos.localRotation = Quaternion.Lerp(GunsSpawnPos.localRotation, Quaternion.Euler(zoomedGunRotation), zoomSpeed * Time.deltaTime);
 
-          }
-          else
-          {
-            // Smoothly transition back to default FOV
-            playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, defaultFOV, zoomSpeed * Time.deltaTime);
+            }
+            else
+            {
+                // Smoothly transition back to default FOV
+                playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, defaultFOV, zoomSpeed * Time.deltaTime);
 
-            //Reset the position and rotation for the GunsSpawnPos
-            GunsSpawnPos.localPosition = Vector3.Lerp(GunsSpawnPos.localPosition, initialGunPosition, zoomSpeed * Time.deltaTime);
-            GunsSpawnPos.localRotation = Quaternion.Lerp(GunsSpawnPos.localRotation, initialGunRotation, zoomSpeed * Time.deltaTime);
+                //Reset the position and rotation for the GunsSpawnPos
+                GunsSpawnPos.localPosition = Vector3.Lerp(GunsSpawnPos.localPosition, initialGunPosition, zoomSpeed * Time.deltaTime);
+                GunsSpawnPos.localRotation = Quaternion.Lerp(GunsSpawnPos.localRotation, initialGunRotation, zoomSpeed * Time.deltaTime);
 
 
-          }
+            }
         }
     }
 }

@@ -1,5 +1,5 @@
-using UnityEngine;
 using GameDevWithMarco.ObserverPattern;
+using UnityEngine;
 
 namespace GameDevWithMarco
 {

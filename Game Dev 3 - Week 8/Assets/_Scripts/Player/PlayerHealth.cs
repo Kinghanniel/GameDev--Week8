@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using GameDevWithMarco.ObserverPattern;
+using UnityEngine;
 
 namespace GameDevWithMarco.Player
 {
@@ -45,7 +43,7 @@ namespace GameDevWithMarco.Player
             playerMovement = GetComponent<Player_Movement>();
         }
 
-        
+
         void Update()
         {
             //PlayDamagedSmokeVFX();
@@ -84,8 +82,8 @@ namespace GameDevWithMarco.Player
             {
                 playerHealth = 0;
 
-               if (deathVFX != null)
-               {
+                if (deathVFX != null)
+                {
                     GameObject deathEffect = Instantiate(deathVFX, deathPos.position, deathVFX.transform.rotation);
                     GameObject fireSmokeEffect = Instantiate(deathFireSmokeVFX, smokePOS.position, deathFireSmokeVFX.transform.rotation);
                     GameObject explosionEffect = Instantiate(deathExplosionVFX, explosionPOS.position, deathExplosionVFX.transform.rotation);
@@ -100,7 +98,7 @@ namespace GameDevWithMarco.Player
 
                     isdeathVFXInstantiated = true;
                     InstantiateCarPrefab();
-               }
+                }
 
                 playerDeath?.Raise();
 
@@ -159,6 +157,6 @@ namespace GameDevWithMarco.Player
             GameObject destroyedCar = Instantiate(carPrefab, transform.position, transform.rotation);
             destroyedCar.transform.parent = null;
         }
-           
+
     }
 }
